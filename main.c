@@ -2,10 +2,10 @@
 ** main.c for  in /home/chiche_j//THE_GAME
 ** 
 ** Made by jonathan chicheportiche
-** Login   <chiche_j@epitech.net>
+**
 ** 
 ** Started on  Tue Aug 20 01:59:18 2013 jonathan chicheportiche
-** Last update Tue Aug 20 02:04:30 2013 jonathan chicheportiche
+** Last update Tue Aug 20 02:14:58 2013 jonathan chicheportiche
 */
 
 #include	"color.h"

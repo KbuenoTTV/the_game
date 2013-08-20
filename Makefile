@@ -2,10 +2,10 @@
 ## Makefile for  in /home/chiche_j//THE_GAME
 ##
 ## Made by jonathan chicheportiche
-## Login   <chiche_j@epitech.net>
+##
 ##
 ## Started on  Tue Aug 20 02:03:14 2013 jonathan chicheportiche
-## Last update Tue Aug 20 02:06:39 2013 jonathan chicheportiche
+## Last update Tue Aug 20 02:14:52 2013 jonathan chicheportiche
 ##
 
 NAME		= the_game
