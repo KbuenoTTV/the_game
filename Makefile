@@ -5,13 +5,15 @@
 ##
 ##
 ## Started on  Tue Aug 20 02:03:14 2013 jonathan chicheportiche
-## Last update Tue Aug 20 02:14:52 2013 jonathan chicheportiche
+## Last update Fri Aug 23 00:07:54 2013 jonathan chicheportiche
 ##
 
 NAME		= the_game
 
 SRC		= main.c \
-		  write_functions.c
+		  write_functions.c \
+		  get_key.c \
+		  option.c
 
 OBJ		= $(SRC:.c=.o)
 
