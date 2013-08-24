@@ -5,11 +5,15 @@
 ** Login   <chiche_j@epitech.net>
 ** 
 ** Started on  Thu Aug 22 23:57:51 2013 jonathan chicheportiche
-** Last update Fri Aug 23 00:08:13 2013 jonathan chicheportiche
+** Last update Fri Aug 23 13:41:08 2013 jonathan chicheportiche
 */
 
+#include	<stdlib.h>
 #include	"color.h"
 #include	"write_functions.h"
+
+int		get_key();
+void		unset_raw_mode();
 
 void		go_up()
 {
@@ -33,12 +37,25 @@ void		go_right()
 
 void		go_inv()
 {
-  ft_putstr_color("Your inventory is empty\n", BLUE);
+  ft_putstr_color("Your inventory is empty\n", YELLOW);
+  ft_putstr_color("Press i to close inventory\n", YELLOW);
+  while (get_key() != 'i');
+  
 }
 
 void		go_quit()
 {
+  int		i;
+
   ft_putstr("Are you sure you wanna quit ?\n");
+  ft_putstr("press y for yes, n for no\n");
+  while ((i = get_key()) != 'y' && i != 'n');
+  if (i == 'y')
+    {
+      unset_raw_mode();
+      exit (0);
+    }
+  
 }
 
 void		go_use()

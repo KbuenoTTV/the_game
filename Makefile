@@ -5,7 +5,7 @@
 ##
 ##
 ## Started on  Tue Aug 20 02:03:14 2013 jonathan chicheportiche
-## Last update Fri Aug 23 00:07:54 2013 jonathan chicheportiche
+## Last update Fri Aug 23 17:22:32 2013 jonathan chicheportiche
 ##
 
 NAME		= the_game
@@ -13,7 +13,10 @@ NAME		= the_game
 SRC		= main.c \
 		  write_functions.c \
 		  get_key.c \
-		  option.c
+		  option.c \
+		  raw_mode.c \
+		  intro.c \
+		  get_option.c
 
 OBJ		= $(SRC:.c=.o)
 
@@ -23,7 +26,7 @@ CFLAGS		= -W -Wall -Wextra -Werror
 
 RM		= rm -f
 
-ECHO		= echo -e
+ECHO		= echo
 
 $(NAME)		: $(OBJ)
 	-@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
@@ -43,5 +46,7 @@ fclean		: clean
 
 re		: fclean all
 
-.PHONY : all clean fclean re
+bin		: all clean
+
+.PHONY : all clean fclean re bin
 

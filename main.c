@@ -5,20 +5,21 @@
 **
 ** 
 ** Started on  Tue Aug 20 01:59:18 2013 jonathan chicheportiche
-** Last update Fri Aug 23 00:06:49 2013 jonathan chicheportiche
+** Last update Fri Aug 23 17:21:20 2013 jonathan chicheportiche
 */
 
 #include	<unistd.h>
-#include	<termios.h>
 #include	<stdio.h>
 #include	"color.h"
 #include	"write_functions.h"
 #include	"direction.h"
 #include	"option.h"
 
-int		get_key();
+int		get_key(void);
+int		get_option(int, t_option*);
+void		set_raw_mode(void);
 
-t_option	g_option[]=
+static t_option	g_option[]=
   {
     {UP, go_up},
     {DOWN, go_down},
@@ -27,44 +28,14 @@ t_option	g_option[]=
     {'i', go_inv},
     {'q', go_quit},
     {'u', go_use},
+    {'s', intro},
     {0, NULL},
   };
 
-int		get_option(int key)
-{
-  int		i;
-
-  i = 0;
-  while (g_option[i].key)
-    {
-      if (g_option[i].key == key)
-	{
-	  g_option[i].ptr_func();
-	  return (0);
-	}
-      i++;
-    }
-  if (g_option[i].key == 0)
-    {
-      return (-1);
-    }
-  return (0);
-}
-
 int main()
 {
-  struct termios t;
-
-  tcgetattr(0, &t);
-  t.c_lflag &= ~ICANON;
-  t.c_lflag &= ~ECHO;
-  t.c_cc[VMIN] = 1;
-  t.c_cc[VTIME] = 0;
-  tcsetattr(0, TCSANOW, &t);
-
-  while (get_option(get_key()) == -1);
-  /* t.c_lflag += ICANON; */
-  /* t.c_lflag += ECHO; */
-  /* tcsetattr(0, TCSANOW, &t); */
+  set_raw_mode();
+  while (2)
+    get_option(get_key(), g_option);
   return (0);
 }
