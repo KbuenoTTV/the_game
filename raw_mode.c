@@ -10,11 +10,11 @@
 **           44     22        SS    TT   UU    UU DD  DD II OO    OO
 **           44    222         SS   TT   UU    UU DD  DD II  OO  OO
 **           44    22222222   SS    TT     UUUU   DDDD   II   OOOO
-** 
+**
 ** File name: raw_mode.c
 ** Made by: jchichep
 ** File created  on  Mon Aug 26 03:07:27 2013 by jchichep
-** Last modified on  Mon Aug 26 03:07:31 2013 by jchichep
+** Last modified on  Mon Aug 26 17:23:44 2013 by jchichep
 */
 
 #include	<termios.h>
@@ -43,7 +43,7 @@ void		set_raw_mode()
 {
   struct termios t;
 
-  tcgetattr(0, &t); 
+  tcgetattr(0, &t);
   t.c_lflag &= ~ICANON;
   t.c_lflag &= ~ECHO;
   t.c_cc[VMIN] = 1;

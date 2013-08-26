@@ -1,25 +1,25 @@
 ##
-##          444    222222          GGG     AAA     MM   MM EEEEE
-##         4444        222       GG       AA AA    MMMMMMM EE
-##        44 44          22      GG  G   AA   AA   MM M MM EEEEE
-##       44  44          22      GG  G  AAAAAAAAA  MM   MM EE
-##      44   44         22         GGG AA       AA MM   MM EEEEE
-##     4444444444      22
-##     4444444444     22      SS  TTTTTT UU    UU DDDD   II   OOOO
-##           44      22      SS     TT   UU    UU DD  DD II  OO  OO
-##           44     22        SS    TT   UU    UU DD  DD II OO    OO
-##           44    222         SS   TT   UU    UU DD  DD II  OO  OO
-##           44    22222222   SS    TT     UUUU   DDDD   II   OOOO
+## Makefile for  in /home/chiche_j//Lem_test
 ## 
-## File name: Makefile
-## Made by: jchichep
-## File created  on  Mon Aug 26 03:06:44 2013 by jchichep
-## Last modified on  Mon Aug 26 03:06:48 2013 by jchichep
+## Made by jonathan chicheportiche
+## Login   <chiche_j@epitech.net>
+## 
+## Started on  Thu Sep 20 10:54:33 2012 jonathan chicheportiche
+## Last update Sun Sep 30 23:00:46 2012 jonathan chicheportiche
 ##
 
-NAME		= the_game
 
-SRC		= main.c \
+NAME	=	the_game
+
+PWD	=	$(shell pwd)
+
+SRCDIR	=	$(PWD)
+
+OBJDIR	=	$(PWD)
+
+ECHO	=	/bin/echo
+
+SRC	=	  main.c \
 		  write_functions.c \
 		  get_key.c \
 		  option.c \
@@ -27,35 +27,46 @@ SRC		= main.c \
 		  intro.c \
 		  get_option.c
 
-OBJ		= $(SRC:.c=.o)
+NOM	=	$(basename $(notdir $(SRC)))
 
-CC		= gcc
+OBJ	=	$(addprefix $(OBJDIR)/, $(addsuffix .o, $(NOM)))
 
-CFLAGS		= -W -Wall -Wextra -Werror
+CFLAGS	+=	-Wall -Wextra -Werror -ansi -pedantic
 
-RM		= rm -f
+$(OBJDIR)/%.o:	$(SRCDIR)/%.c
+	@$(ECHO) -en "\033[0m[CC] : Compiling ...$(notdir $<)\r"
+	@gcc -c $(CFLAGS) -o $@ $< \
+	&& $(ECHO) -en "\033[1;30m[CC] : Compiled $(notdir $<) [\033[0;32mOk\033[1;30m]\033[0m\n" \
+	|| $(ECHO) -en "\033[1;30m[CC] : Compiled $(notdir $<) [\033[0;5;31mError\033[0;1;30m]\033[0m\n"
 
-ECHO		= echo
+$(NAME):	$(OBJ)
+	@$(ECHO) -e "\033[1;30m[CFLAGS] : $(CFLAGS)\033[0m"
+	@gcc $(OBJ) $(CFLAGS) -o $(NAME)
+	@$(ECHO) -e "\033[1;30m[LINKING] : $(basename $(notdir $(addsuffix .o, $(OBJ))))\033[0m"
+	@$(ECHO) -e ' \033[0;31m.o0*0o.\033[0;1;31mCompilation DONE\033[0;31m.o0*0o.\033[0m'
 
-$(NAME)		: $(OBJ)
-	-@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
-	@$(ECHO) "\033[0;32m> Compiled\033[0m"
+all:		$(NAME)
 
-clean		:
-	-@$(RM) $(OBJ)
-	-@$(RM) *~
-	-@$(RM) #*#
-	@$(ECHO) "\033[0;31m> Directory cleaned\033[0m"
+clean:
+	@rm -f *~ */*~ \#*\# */\#*\#
+	@rm -f $(OBJ)
+	@$(ECHO) -e "\033[1;30m[RM] : erasing *~ and #*#\033[00m"
+	@$(ECHO) -e "\033[1;30m[RM] : erasing $(basename $(notdir $(addsuffix .o, $(OBJ))))\033[00m"
+	@$(ECHO) -e '    \033[0;33m.o0*0o.\033[0;1;33mClean DONE\033[0;33m.o0*0o.\033[00m'
 
-all		: $(NAME)
+fclean:		clean
+	@rm -f $(NAME)
+	@$(ECHO) -e "\033[1;30m[RM] : erasing $(NAME)\033[00m"
+	@$(ECHO) -e '   \033[0;32m.o0*0o.\033[0;1;32mFclean DONE\033[0;32m.o0*0o.\033[00m'
 
-fclean		: clean
-	-@$(RM) $(NAME)
-	@$(ECHO) "\033[0;33m> Remove executable\033[0m"
+re:		fclean all
 
-re		: fclean all
+bin:		all clean
 
-bin		: all clean
+allx:		$(NAME)
+	@./$(NAME)
 
-.PHONY : all clean fclean re bin
+rex:		re
+	@./$(NAME)
 
+.PHONY:	all clean fclean re bin allx rex

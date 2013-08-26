@@ -14,7 +14,7 @@
 ** File name: get_key.c
 ** Made by: jchichep
 ** File created  on  Mon Aug 26 02:29:58 2013 by jchichep
-** Last modified on  Mon Aug 26 03:05:54 2013 by jchichep
+** Last modified on  Mon Aug 26 17:20:28 2013 by jchichep
 */
 
 #include	<unistd.h>
@@ -22,7 +22,7 @@
 
 int	get_key()
 {
-    char	 tab[3];
+  char	 tab[3];
 
   tab[0] = 0;
   tab[1] = 0;

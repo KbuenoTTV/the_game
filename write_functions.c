@@ -14,11 +14,13 @@
 ** File name: write_functions.c
 ** Made by: jchichep
 ** File created  on  Mon Aug 26 03:07:48 2013 by jchichep
-** Last modified on  Mon Aug 26 03:07:51 2013 by jchichep
+** Last modified on  Mon Aug 26 17:35:00 2013 by jchichep
 */
 
 #include	<unistd.h>
 #include	"color.h"
+
+void		usleep(int delay);
 
 void		ft_putchar(char c)
 {
