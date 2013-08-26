@@ -1,11 +1,20 @@
 /*
-** get_key.c for  in /home/chiche_j//myprintf-2016ed-2015s-2017si-chiche_j
-** 
-** Made by jonathan chicheportiche
-** Login   <chiche_j@epitech.net>
-** 
-** Started on  Thu Aug 22 23:34:56 2013 jonathan chicheportiche
-** Last update Fri Aug 23 00:02:58 2013 jonathan chicheportiche
+**          444    222222          GGG     AAA     MM   MM EEEEE
+**         4444        222       GG       AA AA    MMMMMMM EE
+**        44 44          22      GG  G   AA   AA   MM M MM EEEEE
+**       44  44          22      GG  G  AAAAAAAAA  MM   MM EE
+**      44   44         22         GGG AA       AA MM   MM EEEEE
+**     4444444444      22
+**     4444444444     22      SS  TTTTTT UU    UU DDDD   II   OOOO
+**           44      22      SS     TT   UU    UU DD  DD II  OO  OO
+**           44     22        SS    TT   UU    UU DD  DD II OO    OO
+**           44    222         SS   TT   UU    UU DD  DD II  OO  OO
+**           44    22222222   SS    TT     UUUU   DDDD   II   OOOO
+**
+** File name: get_key.c
+** Made by: jchichep
+** File created  on  Mon Aug 26 02:29:58 2013 by jchichep
+** Last modified on  Mon Aug 26 03:05:54 2013 by jchichep
 */
 
 #include	<unistd.h>

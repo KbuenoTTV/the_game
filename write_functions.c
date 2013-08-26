@@ -1,11 +1,20 @@
 /*
-** write_functions.c for  in /home/chiche_j//THE_GAME
+**          444    222222          GGG     AAA     MM   MM EEEEE
+**         4444        222       GG       AA AA    MMMMMMM EE
+**        44 44          22      GG  G   AA   AA   MM M MM EEEEE
+**       44  44          22      GG  G  AAAAAAAAA  MM   MM EE
+**      44   44         22         GGG AA       AA MM   MM EEEEE
+**     4444444444      22
+**     4444444444     22      SS  TTTTTT UU    UU DDDD   II   OOOO
+**           44      22      SS     TT   UU    UU DD  DD II  OO  OO
+**           44     22        SS    TT   UU    UU DD  DD II OO    OO
+**           44    222         SS   TT   UU    UU DD  DD II  OO  OO
+**           44    22222222   SS    TT     UUUU   DDDD   II   OOOO
 ** 
-** Made by jonathan chicheportiche
-** 
-** 
-** Started on  Tue Aug 20 01:44:54 2013 jonathan chicheportiche
-** Last update Tue Aug 20 02:02:53 2013 jonathan chicheportiche
+** File name: write_functions.c
+** Made by: jchichep
+** File created  on  Mon Aug 26 03:07:48 2013 by jchichep
+** Last modified on  Mon Aug 26 03:07:51 2013 by jchichep
 */
 
 #include	<unistd.h>

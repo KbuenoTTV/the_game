@@ -1,11 +1,20 @@
 /*
-** option.c for  in /home/chiche_j//myprintf-2016ed-2015s-2017si-chiche_j
+**          444    222222          GGG     AAA     MM   MM EEEEE
+**         4444        222       GG       AA AA    MMMMMMM EE
+**        44 44          22      GG  G   AA   AA   MM M MM EEEEE
+**       44  44          22      GG  G  AAAAAAAAA  MM   MM EE
+**      44   44         22         GGG AA       AA MM   MM EEEEE
+**     4444444444      22
+**     4444444444     22      SS  TTTTTT UU    UU DDDD   II   OOOO
+**           44      22      SS     TT   UU    UU DD  DD II  OO  OO
+**           44     22        SS    TT   UU    UU DD  DD II OO    OO
+**           44    222         SS   TT   UU    UU DD  DD II  OO  OO
+**           44    22222222   SS    TT     UUUU   DDDD   II   OOOO
 ** 
-** Made by jonathan chicheportiche
-** Login   <chiche_j@epitech.net>
-** 
-** Started on  Thu Aug 22 23:57:51 2013 jonathan chicheportiche
-** Last update Fri Aug 23 13:41:08 2013 jonathan chicheportiche
+** File name: option.c
+** Made by: jchichep
+** File created  on  Mon Aug 26 03:06:59 2013 by jchichep
+** Last modified on  Mon Aug 26 03:07:04 2013 by jchichep
 */
 
 #include	<stdlib.h>
