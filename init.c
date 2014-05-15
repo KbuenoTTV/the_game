@@ -6,21 +6,12 @@
 /*   By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/27 08:26:21 by jchichep          #+#    #+#             */
-/*   Updated: 2014/03/30 12:44:31 by jchichep         ###   ########.fr       */
+/*   Updated: 2014/05/15 13:28:51 by jchichep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include		"perso.h"
 #include		"function.h"
-
-void			init_carac(t_carac *carac)
-{
-	carac->force = 10;
-	carac->dexterite = 10;
-	carac->intelligence = 10;
-	carac->charisme = 10;
-	carac->sagesse = 10;
-}
 
 void			init_argent(t_argent *argent)
 {

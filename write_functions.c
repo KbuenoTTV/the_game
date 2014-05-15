@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/03/30 12:27:23 by jchichep          #+#    #+#             */
-/*   Updated: 2014/03/30 12:30:12 by jchichep         ###   ########.fr       */
+/*   Created: 2014/04/30 19:55:36 by jchichep          #+#    #+#             */
+/*   Updated: 2014/05/15 13:32:47 by jchichep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,20 @@ void		ft_delay_putstr_color(char *str, char *color, unsigned int delay)
 	ft_putstr(color);
 	ft_delay_putstr(str, delay);
 	ft_putstr(NORMAL);
+}
+
+void		ft_putnbr(int nb)
+{
+	unsigned int	nbr;
+
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nbr = -nb;
+	}
+	else
+		nbr = nb;
+	if (nbr / 10 > 0)
+		ft_putnbr(nbr / 10);
+	ft_putchar(nb % 10 + '0');
 }

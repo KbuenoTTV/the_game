@@ -6,7 +6,7 @@
 #    By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 16:20:35 by jchichep          #+#    #+#              #
-#    Updated: 2014/03/30 12:49:38 by jchichep         ###   ########.fr        #
+#    Updated: 2014/05/15 13:27:23 by jchichep         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -14,8 +14,10 @@ NAME		= noname
 
 SRC			= main.c \
 			  init.c \
+			  ncurse.c \
 			  raw_mode.c \
 			  set_obj.c \
+			  show.c \
 			  write_functions.c
 
 SRCDIR		= .
@@ -32,6 +34,8 @@ CC			= /usr/bin/gcc
 
 CFLAGS		= -Wall -Wextra -Werror
 
+LIB			= -lncurses
+
 RM			= rm -f
 
 ECHO		= echo
@@ -40,15 +44,15 @@ all			: $(NAME)
 
 main		: $(OBJ)
 	@$(ECHO) "\033[0;32m> MAIN Compiled\033[0m"
-	@$(CC) -o $(NAME) $(OBJ) $(HEADDIR)
+	@$(CC) -o $(NAME) $(OBJ) $(HEADDIR) $(LIB)
 
 $(NAME)		: $(OBJ)
 	@$(ECHO) "\033[0;32m> MAIN Compiled\033[0m"
-	@$(CC) -o $(NAME) $(OBJ) $(HEADDIR)
+	@$(CC) -o $(NAME) $(OBJ) $(HEADDIR) $(LIB)
 
 $(OBJDIR)/%.o		: $(SRCDIR)/%.c
 	@test -d $(OBJDIR) || mkdir $(OBJDIR)
-	@$(CC) $(CFLAGS) $(HEADDIR) -c -o $@ $< \
+	@$(CC) $(CFLAGS) $(HEADDIR) $(LIB) -c -o $@ $< \
 	&& $(ECHO) "\033[1;30m[CC] : Compiled $(notdir $<) \
 	[\033[0;32mOk\033[1;30m]\033[0m" \
 	|| $(ECHO) "\033[1;30m[CC] : Compiled $(notdir $<) \

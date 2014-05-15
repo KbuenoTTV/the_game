@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   color.c                                            :+:      :+:    :+:   */
+/*   show.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/03/30 12:30:40 by jchichep          #+#    #+#             */
-/*   Updated: 2014/03/30 12:44:25 by jchichep         ###   ########.fr       */
+/*   Created: 2014/04/30 19:44:24 by jchichep          #+#    #+#             */
+/*   Updated: 2014/05/15 13:34:13 by jchichep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include		"perso.h"
+#include		"function.h"
 
-int main()
+void			show_carac(t_carac *carac)
 {
-	int	i = 0;
-	while (i < 256)
-		printf("\033[38;5;%dm\t",i++);
-	return (0);
+	ft_putstr("STATS:\nForce -> ");
+	ft_putnbr(carac->force);
+	ft_putstr("\nDexterite -> ");
+	ft_putnbr(carac->dexterite);
+	ft_putstr("\nIntelligence -> ");
+	ft_putnbr(carac->intelligence);
+	ft_putstr("\nCharisme -> ");
+	ft_putnbr(carac->charisme);
+	ft_putstr("\nSagesse -> ");
+	ft_putnbr(carac->sagesse);
+	ft_putstr("\n");
 }
