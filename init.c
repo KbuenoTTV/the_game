@@ -6,7 +6,7 @@
 /*   By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/27 08:26:21 by jchichep          #+#    #+#             */
-/*   Updated: 2014/05/15 13:28:51 by jchichep         ###   ########.fr       */
+/*   Updated: 2014/05/16 08:42:01 by jchichep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void			init_argent(t_argent *argent)
 {
 	argent->pc = 0;
 	argent->pa = 0;
-	argent->po = 0;
 	argent->pp = 0;
 }
 

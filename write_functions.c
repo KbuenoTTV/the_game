@@ -6,7 +6,7 @@
 /*   By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/04/30 19:55:36 by jchichep          #+#    #+#             */
-/*   Updated: 2014/05/15 13:32:47 by jchichep         ###   ########.fr       */
+/*   Updated: 2014/05/16 08:52:10 by jchichep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,11 @@ void		ft_putnbr(int nb)
 	if (nbr / 10 > 0)
 		ft_putnbr(nbr / 10);
 	ft_putchar(nb % 10 + '0');
+}
+
+void		ft_putnbr_color(int nb, char *color)
+{
+	ft_putstr(color);
+	ft_putnbr(nb);
+	ft_putstr(NORMAL);
 }

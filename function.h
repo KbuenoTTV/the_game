@@ -6,7 +6,7 @@
 /*   By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/27 08:25:55 by jchichep          #+#    #+#             */
-/*   Updated: 2014/05/15 13:34:13 by jchichep         ###   ########.fr       */
+/*   Updated: 2014/05/23 13:08:11 by jchichep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 /* INIT FOR CARAC init.c */
 
-void			init_carac(t_carac *carac);
+void			init_carac(t_carac *carac, t_argent *argent);
 void			init_argent(t_argent *argent);
 void			init_info(t_info *info);
 void			init_main(t_main *main);
@@ -37,9 +37,14 @@ void			ft_delay_putstr(char *str, unsigned int delay);
 void			ft_putstr_color(char *str, char *color);
 void			ft_delay_putstr_color(char *str, char *color, unsigned int delay);
 void			ft_putnbr(int nb);
+void			ft_putnbr_color(int nb, char *color);
+
+/* NCURSES init_curse.c*/
+
+void			init_ncurse(void);
 
 /* TEMPORARY FUNCTIONS */
 
-void			show_carac(t_carac *carac); /* show.c */
+void			show_carac(t_carac *carac, t_argent *agent); /* show.c */
 
 #endif
