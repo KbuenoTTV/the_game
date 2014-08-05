@@ -6,7 +6,7 @@
 /*   By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/27 08:26:21 by jchichep          #+#    #+#             */
-/*   Updated: 2014/05/16 08:42:01 by jchichep         ###   ########.fr       */
+/*   Updated: 2014/08/05 02:08:42 by jchichep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void			init_info(t_info *info)
 	info->pv = 20;
 	info->lvl = 0;
 	info->xp = 0;
-	info->race = HUMAIN;
+	init_race(&(info->race));
 }
 
 void			init_main(t_main *main)

@@ -6,7 +6,7 @@
 #    By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 16:20:35 by jchichep          #+#    #+#              #
-#    Updated: 2014/05/23 13:06:57 by jchichep         ###   ########.fr        #
+#    Updated: 2014/08/05 02:11:23 by jchichep         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -15,7 +15,8 @@ NAME		= noname
 SRC			= main.c \
 			  init.c \
 			  init_curse.c \
-			  ncurse.c \
+			  init_stat.c \
+			  init_race.c \
 			  raw_mode.c \
 			  set_obj.c \
 			  show.c \
