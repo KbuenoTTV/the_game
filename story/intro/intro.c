@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   intro.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/03/27 06:51:42 by jchichep          #+#    #+#             */
-/*   Updated: 2014/08/05 03:30:53 by jchichep         ###   ########.fr       */
+/*   Created: 2014/08/05 03:08:15 by jchichep          #+#    #+#             */
+/*   Updated: 2014/08/05 03:31:37 by jchichep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"perso.h"
-#include	"function.h"
+#include		<ncurses.h>
+#include		"function.h"
 
-int				main(void)
+void			intro(void)
 {
-	t_perso		perso;
-
-	set_raw_mode();
-	intro();
-	init_carac(&(perso.carac), &(perso.argent));
-	init_argent(&(perso.argent));
-	init_equip(&perso.equip);
-	init_info(&(perso.info));
-	show_carac(&(perso.carac), &(perso.argent));
-	unset_raw_mode();
-	return (0);
+	init_ncurse();
+	mvprintw(0, 0, "The game is an RPG game like dungeon & dragons and the book where you are the hero.\n\nIt is just a free project so there is no release date and I don\'t know when the game may be in alpha/beta test.\nSo wait until it will be finish.\n\nCopyright kevinjojo007 but who will copy this ?:) ");
+	getch();
+	endwin();
 }

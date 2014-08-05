@@ -6,13 +6,14 @@
 #    By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 16:20:35 by jchichep          #+#    #+#              #
-#    Updated: 2014/08/05 02:55:45 by jchichep         ###   ########.fr        #
+#    Updated: 2014/08/05 03:20:18 by jchichep         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME		= noname
 
 SRC			= main.c \
+			  story/intro/intro.c \
 			  story/init/init.c \
 			  story/init/init_curse.c \
 			  story/init/init_stat.c \
@@ -56,6 +57,7 @@ $(OBJDIR)/%.o		: $(SRCDIR)/%.c
 	@test -d $(OBJDIR) || mkdir $(OBJDIR)
 	@test -d $(OBJDIR)/story || mkdir $(OBJDIR)/story
 	@test -d $(OBJDIR)/story/init || mkdir $(OBJDIR)/story/init
+	@test -d $(OBJDIR)/story/intro || mkdir $(OBJDIR)/story/intro
 	@$(CC) $(CFLAGS) $(HEADDIR) $(LIB) -c -o $@ $< \
 	&& $(ECHO) "\033[1;30m[CC] : Compiled $(notdir $<) \
 	[\033[0;32mOk\033[1;30m]\033[0m" \

@@ -6,12 +6,18 @@
 /*   By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/27 08:25:55 by jchichep          #+#    #+#             */
-/*   Updated: 2014/08/05 02:11:02 by jchichep         ###   ########.fr       */
+/*   Updated: 2014/08/05 03:24:17 by jchichep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FUNCTION_H
 # define FUNCTION_H
+
+#include "perso.h"
+
+/* INTRO */
+
+void			intro(void);
 
 /* INIT FOR CARAC init.c */
 
