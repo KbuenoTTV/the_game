@@ -6,7 +6,7 @@
 /*   By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/27 07:16:02 by jchichep          #+#    #+#             */
-/*   Updated: 2014/05/16 09:17:14 by jchichep         ###   ########.fr       */
+/*   Updated: 2014/08/05 02:33:28 by jchichep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ typedef struct	s_argent
 typedef struct	s_obj
 {
 	char		*name;
+	int			att;
+	int			def;
 	int			force;
 	int			dexterite;
 	int			intelligence;
@@ -70,6 +72,8 @@ typedef struct	s_info
 	int			pv;
 	int			lvl;
 	int			xp;
+	int			att;
+	int			def;
 	t_race		race;
 }				t_info;
 

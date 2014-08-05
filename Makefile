@@ -6,17 +6,17 @@
 #    By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 16:20:35 by jchichep          #+#    #+#              #
-#    Updated: 2014/08/05 02:11:23 by jchichep         ###   ########.fr        #
+#    Updated: 2014/08/05 02:55:45 by jchichep         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME		= noname
 
 SRC			= main.c \
-			  init.c \
-			  init_curse.c \
-			  init_stat.c \
-			  init_race.c \
+			  story/init/init.c \
+			  story/init/init_curse.c \
+			  story/init/init_stat.c \
+			  story/init/init_race.c \
 			  raw_mode.c \
 			  set_obj.c \
 			  show.c \
@@ -28,7 +28,7 @@ HEADDIR		= -I./includes
 
 OBJ			= $(addprefix $(OBJDIR)/, $(addsuffix .o, $(NOM)))
 
-NOM			= $(basename $(notdir $(SRC)))
+NOM			= $(basename $(SRC))
 
 OBJDIR		= ./obj
 
@@ -54,6 +54,8 @@ $(NAME)		: $(OBJ)
 
 $(OBJDIR)/%.o		: $(SRCDIR)/%.c
 	@test -d $(OBJDIR) || mkdir $(OBJDIR)
+	@test -d $(OBJDIR)/story || mkdir $(OBJDIR)/story
+	@test -d $(OBJDIR)/story/init || mkdir $(OBJDIR)/story/init
 	@$(CC) $(CFLAGS) $(HEADDIR) $(LIB) -c -o $@ $< \
 	&& $(ECHO) "\033[1;30m[CC] : Compiled $(notdir $<) \
 	[\033[0;32mOk\033[1;30m]\033[0m" \
@@ -62,7 +64,7 @@ $(OBJDIR)/%.o		: $(SRCDIR)/%.c
 
 clean		:
 	@$(RM) $(OBJ)
-	@$(RM) -r $(OBJDIR)
+	@$(RM) -fr $(OBJDIR)
 	@$(ECHO) "\033[0;34m> Main Directory cleaned\033[0m"
 
 fclean		: clean

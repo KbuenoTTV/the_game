@@ -6,7 +6,7 @@
 /*   By: jchichep <jchichep@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/23 13:01:34 by jchichep          #+#    #+#             */
-/*   Updated: 2014/05/30 19:38:52 by jchichep         ###   ########.fr       */
+/*   Updated: 2014/08/05 02:26:21 by jchichep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void init_ncurse(void)
 {
 	initscr();
+	erase();
 	raw();
 	start_color();
 	keypad(stdscr, TRUE);
